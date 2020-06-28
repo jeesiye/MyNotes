@@ -1,5 +1,13 @@
 # 概念篇
 
+## 历史
+
+`CVS` : 1986年
+
+`SVN` : 2001年
+
+`GIT` : 2005年(`bitkeper`)
+
 ## 工具比较
 
 - `svn` : 使用增量备份的方式,来控制版本
@@ -51,6 +59,10 @@
 
 提交别名 : `git config --global alias.cm 'commit -m "not commit message"'`
 
+GBK支持 : 
+
+自动补全 : 
+
 ## 删除变量
 
 `git config --global --unset user.name`
@@ -60,6 +72,16 @@
 所有变量 : `git config -l`
 
 指定变量 : `git config uer.name`
+
+## 编辑文件
+
+本地库文件 : `git config -e` (.git/config文件)
+
+全局文件 : `git config -e --global` (userdir/.gitconfig文件)
+
+系统文件 : `git config -e --system` (/etc/.gitconfig文件)
+
+优先级 : `本地库` > `全局` > `系统`
 
 ## ssh密匙
 
@@ -202,3 +224,50 @@ git branch
 git branch -r
 ```
 
+# GitHub的操作
+
+## 团队邀请
+
+关键字是项目的`settings`中,找到`collaborator`
+
+2020年06月的操作步骤是 : `settings`-->`manage access`-->`invite a collaborator`
+
+## 跨团队合作
+
+关键字是`fork`和`pull request`
+
+协作者 : `pull request` `new pull request` `create pull request`
+
+管理者 : `pull request ` `merge pull request`(代码审核)
+
+# Eclipse插件操作
+
+## 工程操作
+
+创建工程 : `ctrl + N` ---> `搜索git` ---> `创建 git repository`
+
+导入工程 : `import` --> `搜索git` --->`导入` ---> `转换为maven`(注意勾选`import as general project`)
+
+## 忽略文件
+
+网址 : `github.com/github/gitignore`
+
+配置: `.gitconfig`文件 --->添加`[core] excluderfile = 文件路径`
+
+maven项目额外添加 : `.setting` `.classpath` `.project`
+
+# Git工作流
+
+`集中式` 类似svn
+
+`gitFlow` 分支
+
+`Forking` 审查
+
+# Gitlab搭建
+
+1. 官网上下载`gitlab`安装包,推荐使用rpm包,是gitlab-ce
+   推荐网站`packagesgitlab.com`
+2. `gitlab-ctl configure`
+3. `gitlab-ctl start`  `gitlab-ctl stop`
+4. web端登陆,默认的用户时root,密码首次需要设定.
