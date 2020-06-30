@@ -1,3 +1,9 @@
+<style>
+table {
+	width: 100%;
+}
+</style>
+
 # 文件管理
 
 ## 基础操作
