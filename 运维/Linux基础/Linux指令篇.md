@@ -65,17 +65,17 @@
   - 迭代打包 : `zip -r 压缩包 输入目录` 
   - 指定解压 : `unzip 压缩包 -d 输出目录` 
 - `tar.gz`压缩包 
-  - `-z #调用gzip或gunzip指令`   `-j #调用bzip2或bunzip2指令` 
-    `-c #打包`   `-x #解压` 
+  - `-z #调用gzip或gunzip指令`   `-j #调用bzip2或bunzip2指令`  
+    `-c #打包`   `-x #解压`  
     `-v #冗余`   `-f #指令存档,置于末尾`   `-C #指定输出目录` 
-  - 打包 : `tar cvf 压缩包 输入目录`   `tar -cvf 压缩包 输入目录` 
+  - 打包 : `tar cvf 压缩包 输入目录`   `tar -cvf 压缩包 输入目录`  
     `tar zcvf 压缩包 输入目录` `tar -zcvf 压缩包 输入目录`  
-  - 解压 : `tar xvf 压缩包`   `tar -xvf 压缩包 -C 输出目录` 
+  - 解压 : `tar xvf 压缩包`   `tar -xvf 压缩包 -C 输出目录`  
     `tar zxvf 压缩包`   `tar -zxvf 压缩包 -C 输出目录` 
 - `tar.bz2` 压缩包
-  - 打包 : `tar cvf 压缩包 输入目录`   `tar -cvf 压缩包 输入目录` 
+  - 打包 : `tar cvf 压缩包 输入目录`   `tar -cvf 压缩包 输入目录`  
     `tar jcvf 压缩包 输入目录`   `tar -jcvf 压缩包 输入目录` 
-  - 解压 : `tar xvf 压缩包`   `tar -xvf 压缩包 -C 输出目录` 
+  - 解压 : `tar xvf 压缩包`   `tar -xvf 压缩包 -C 输出目录`  
     `tar jxvf 压缩包`   `tar -jxvf 压缩包 -C 输出目录` 
 - `xz` 压缩包 
   - 非默认安装,执行`yum install xz` 
@@ -88,7 +88,7 @@
 #### cpio
 
 - 备份和恢复,必须使用绝对路径!(该指令,在执行过程中,若采用相对路径,始终是相对路径)
-- `-i #copy-in,备份`   `-o #copy-out,恢复` 
+- `-i #copy-in,备份`   `-o #copy-out,恢复`  
   `-c #使用ASCII模式,适合跨平台备份`   `-B #将默认块512,扩大十倍,加快速度`   `-d #目录不存在,则创建` 
 - 备份 : `find /home/admin|cpio -ocB>admin.cpio` 
 - 恢复 : `cpio -icd</root/admin.cpio` 
@@ -221,13 +221,13 @@
 - 地址查看 : `ip addr show`   `ifconfig` 
 - 启动断开 
   - 推荐 : `ifup ens33`   `ifdown ens33` 
-  - 不推荐 : `ifconfig ens33 up`   `ifconfig ens33 down` 
+  - 不推荐 : `ifconfig ens33 up`   `ifconfig ens33 down`  
     `ip link set ens33 up`   `ip link set ens33 down` 
 - mac地址 : `nmcli dev show #centos7`   `nmcli dev list #centos6`    (`yum install NetworkManager`)
 - uuid值 : `nmcli con show #centos7`   `nmcli con list #centos6` 
-- 添加IP临时别名 : `ifconfig ens33 add 192.168.1.131 netmask 255.255.255.0 up` 
+- 添加IP临时别名 : `ifconfig ens33 add 192.168.1.131 netmask 255.255.255.0 up`  
   `ip addr add 192.168.1.131/24 brd + dev ens33 label ens33:0` 
-- 删除IP临时别名 : `ifconfig ens33 del 192.168.1.131` 
+- 删除IP临时别名 : `ifconfig ens33 del 192.168.1.131`  
   `ip addr del 192.168.1.131/24 brd + dev ens33 label ens33:0` 
 
 ## 端口
