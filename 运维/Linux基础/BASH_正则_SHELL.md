@@ -188,14 +188,20 @@
 
 
 
+
+
 - `echo PATH` 等价 `echo ${PATH}` 
 - `ll /lib/modules/$(uname -r)/kernel` 等价反引号的格式
 - `ulimit -a` 查看多用户的限制
 
 
 
+
+
 - `alias` 和 `unalias` 别名
 - `history` `$HISTSIZE` 指令历史
+
+
 
 
 
