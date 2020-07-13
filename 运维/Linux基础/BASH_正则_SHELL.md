@@ -183,30 +183,22 @@
 
 ## 杂项
 
-- `cat /etc/shells` 合法的shell
-- `type pwd` shell的类型
+- 
+  - `cat /etc/shells` 合法的shell
+  - `type pwd` shell的类型
+- 
 
+  - `echo PATH` 等价 `echo ${PATH}` 
+  - `ll /lib/modules/$(uname -r)/kernel` 等价反引号的格式
+  - `ulimit -a` 查看多用户的限制
+- 
 
+  - `alias` 和 `unalias` 别名
+  - `history` `$HISTSIZE` 指令历史
+- 
 
-
-
-- `echo PATH` 等价 `echo ${PATH}` 
-- `ll /lib/modules/$(uname -r)/kernel` 等价反引号的格式
-- `ulimit -a` 查看多用户的限制
-
-
-
-
-
-- `alias` 和 `unalias` 别名
-- `history` `$HISTSIZE` 指令历史
-
-
-
-
-
-- 符号`-` 的用途.可替代`stdin` `stdout`
-- `tar cvf - /home | tar xvf - -C /root` 这就可以省略压缩包的名称了
+  - 符号`-` 的用途.可替代`stdin` `stdout`
+  - `tar cvf - /home | tar xvf - -C /root` 这就可以省略压缩包的名称了
 
 # 正则
 
