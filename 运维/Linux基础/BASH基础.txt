@@ -1,0 +1,11 @@
+
+cat /etc/shells  #合法shell
+type pwd  #shell类型
+
+	
+
+echo $PATH  等价  echo ${PATH}
+ll /lib/modules/`uname -r`/kernel  等价  ll /lib/modules/$(uname -a)/kernel
+ulimit -a  #文件有关的,对用户的限制
+
+

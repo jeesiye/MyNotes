@@ -1,8 +1,12 @@
-<style>
-table {
-	width: 100%;
-}
-</style>
+# 组合键
+
+## 终端terminal
+
+- `Tab` : 自动补全
+- `Ctrl+c` : 终止
+- `Ctrl+d` : 退出
+- `shift+up/down` : 上下移动一行
+- `shift+pgup/pgdown` : 上下移动一页
 
 # 文件管理
 
@@ -219,6 +223,30 @@ table {
   - 删除 : `rpm -e lrzsz-0.12.20-36.el7.x86_64.rpm` 
 
 ## yum详解
+
+- `install & localinstall` 
+  -  `yum install httpd` 
+  -  `yum install httpd --downloadonly --downloaddir=/home/admin/rpms` 
+  -  `yum localinstall lrzsz-0.12.20-36.el7.x86_64.rpm` 
+- `update & upgrade` 
+  - `yum update`   
+  - `yum update all`   `yum check-update`   `yum upgrade`   
+- `info & list`   
+  - `yum info httpd`  
+    `yum info`   `yum info all`   `yum info installed`   `yum info extras`   `yum info update`   
+  - `yum list httpd`  
+    `yum list`   `yum list all`   `yum list installed`   `yum list extras`   `yum list update`   
+- `search` 
+  - `yum search httpd`  
+    `yum provides httpd` 
+- `clean` 
+  - `yum clean`  
+  - `yum clean all`   `yum clean packages`   `yum clean headers`   `yum clean oldheaders`   
+- `remove`   
+  - `yum remove httpd`
+  - `yum autoremoe`   
+- `yum mackcache`   
+- `yum repolist`   `yum repoinfo`   `yum history`   
 
 # 网络管理
 

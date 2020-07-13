@@ -2,6 +2,12 @@
 
 |              |                    |                                                              |
 | ------------ | ------------------ | ------------------------------------------------------------ |
+|              |                    |                                                              |
+|              |                    |                                                              |
+|              |                    |                                                              |
+| **软件安装** |                    |                                                              |
+|              | yum配置            | `/etc/yum.cnf`                                               |
+|              | yum镜像            | `/etc/yun.repo.d/Centos-Base.repo`                           |
 | **网络相关** |                    |                                                              |
 |              | 网卡               | `/etc/sysconfig/network-scripts/ifcfg-ens33`                 |
 |              | 回环地址           | `/etc/sysconfig/network-scripts/ifcfg-lo`                    |
@@ -45,6 +51,15 @@
 |      |                            |                  |
 |      |                            |                  |
 
+# 汉化相关
+
+## man指令
+
+- `yum install man-pages-zh-CN`  
+- `find / -maxdepth 4 | grep -i man/zh_cn`  
+- 编辑用户目录中的`.bashrc`文件,添加别名设置:`	alias cman='man -M /usr/share/man/zh_CN'`  
+- 重新登陆terminal即可.
+
 # 网路相关
 
 ## 静态IP地址
@@ -68,9 +83,9 @@ NAME=ens33
 ## IP别名
 
 - 临时生效 
-  - `ifconfig ens33 add 192.168.1.130 netmask 255.255.255.0 up` 
+  - `ifconfig ens33 add 192.168.1.130 netmask 255.255.255.0 up`  
     `ifconfig ens33 del 192.168.1.130` 
-  - `ip addr add 192.168.1.130/24 brd + dev ens33 label ens33:0` 
+  - `ip addr add 192.168.1.130/24 brd + dev ens33 label ens33:0`  
     `ip addr del 192.168.1.130/24 brd + dev ens33 label ens33:0` 
 - 永久生效
   1. `cp /etc/sysconfig/network-scripts/ifcfg-ens33 /etc/sysconfig/network-scripts/ifcfg-ens33:0` 
